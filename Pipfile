@@ -10,6 +10,7 @@ mypy = "*"
 pylint = "*"
 coverage = "*"
 flask = "*"
+coveralls = "*"
 
 [requires]
 python_version = "3.7"
