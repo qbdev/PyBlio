@@ -84,7 +84,7 @@ jobs: # A basic unit of work in a run
 
 workflows:
   version: 2
-  build:
+  build_and_test:
     jobs:
     - pre-install-pipenv:
       filters:
@@ -95,10 +95,10 @@ workflows:
           branches:
             only: develop
           requires:
-            - pre-install-pipenv
+          - pre-install-pipenv
     - typecheck:
         filters:
           branches:
             only: develop
         requires:
-          - pre-install-pipenv
+        - pre-install-pipenv
