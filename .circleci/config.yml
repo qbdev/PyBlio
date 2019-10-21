@@ -94,8 +94,8 @@ workflows:
         filters:
           branches:
             only: develop
-          requires:
-          - pre-install-pipenv
+        requires:
+        - pre-install-pipenv
     - typecheck:
         filters:
           branches:
