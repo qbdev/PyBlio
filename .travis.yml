@@ -1,11 +1,11 @@
 language: python
 sudo: false
 python:
-  - "3.8"
+  - "3.7"
 # command to install dependencies
 install:
   - pip install pipenv -U
-  - pipenv install --dev.
+  - pipenv install
 # command to run tests
 script:
   - pipenv run pytest
