@@ -9,3 +9,7 @@ install:
 # command to run tests
 script:
   - pipenv run pytest
+
+after_success:
+  - pipenv run pytest --cov-config .coveragerc --verbose --cov-report term --cov-report xml --cov=core tests
+  - pipenv run coveralls
